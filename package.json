@@ -1,0 +1,28 @@
+{
+  "name": "test",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "start": "bun x drizzle-kit migrate && NODE_ENV=production bun src/index.ts",
+    "lint": "bun x @biomejs/biome check",
+    "lint:fix": "bun run lint --fix",
+    "generate": "bun x drizzle-kit generate",
+    "push": "bun x drizzle-kit push",
+    "migrate": "bun x drizzle-kit migrate",
+    "studio": "bun x drizzle-kit studio",
+    "build": "bun build.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@gramio/autoload": "^1.1.0",
+    "esbuild-plugin-autoload": "^0.3.2",
+    "gramio": "^0.4.10"
+  }
+}
